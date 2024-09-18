@@ -1,0 +1,40 @@
+version: '3'
+services:
+  per-application-client:
+    image: mattlheureux/per-application-client
+    ports:
+    - "3000:80"
+  per-service-amelioration-sols:
+    image: mattlheureux/per-service-amelioration-sols
+    ports:
+    - "4000:80"
+    command: npm start
+  per-service-association-plants:
+    image: mattlheureux/per-service-association-plants
+    ports:
+    - "5000:80"
+    command: npm start
+  per-service-commande:
+    image: mattlheureux/per-service-commande
+    ports:
+    - "6000:80"
+    command: npm start
+  per-service-guilde:
+    image: mattlheureux/per-service-guilde
+    ports:
+    - "7000:80"
+    command: npm start
+  per-service-mise-en-relation:
+    image: mattlheureux/per-service-mise-en-relation
+    ports:
+    - "8000:80"
+  per-service-retour-experience:
+    image: mattlheureux/per-service-retour-experience
+    ports:
+    - "9000:80"
+    command: npm start
+  per-service-user:
+    image: mattlheureux/per-service-user
+    ports:
+    - "2000:80"
+    command: npm start

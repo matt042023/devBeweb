@@ -1,0 +1,115 @@
+$title-font: 'Dancing Script', cursive;
+$primary-color: rgb(250, 236, 214);
+$secondary-color: #907955;
+
+
+.nav-color {
+    background-color: $primary-color;
+}
+
+.backgroung-accueil {
+    background-image: url(/kfs-application-client/ressources/coin-vearanda-cafe.jpg);
+    height: 80vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .title-accueil {
+        padding: 0, 5em;
+        color: $primary-color;
+        font-family: $title-font;
+        font-size: 7em;
+        display: flex;
+    }
+
+}
+
+
+
+
+main {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+.image-size img {
+    background-size: cover;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#productList {
+    padding: 2em;
+}
+
+#contact {
+    padding: 5em;
+}
+
+
+@media screen and (min-width: 760px) {
+    .backgroung-accueil {
+        height: 90vh;
+    }
+
+    #presentation {
+        height: 100vh;
+        padding-top: 10vh;
+        h2{
+            text-align: center;
+            padding-top: 2em;
+        }
+        p{
+            padding: 4em 1em 0 1em;
+        }
+
+    }
+
+    #equipe {
+        height: 100vh;
+        padding-top: 10vh;
+        h2{
+            text-align: center;
+            padding-top: 2em;
+        }
+        p{
+            padding: 4em 1em 0 1em;
+        }
+    }
+
+    #productList {
+        height: 100vh;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        padding-top: 15vh;
+        justify-content: center;
+    }
+
+    .container-table {
+        border: 1px rgb(0, 0, 0) solid;
+        padding: 2em;
+        background-color: $secondary-color ;
+        border-radius: 10px;
+        box-shadow: 5px 5px 18px 2px #624924;
+
+        .table {
+            background-color: $secondary-color;
+        }
+        h2{
+            color: $primary-color;
+        }
+
+    }
+
+    #contact {
+        height: 100vh;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+}

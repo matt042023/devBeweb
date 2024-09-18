@@ -1,0 +1,174 @@
+METHODOLOGIE DE CREATION D'UN PROJET 
+
+(ex E-commerce basé sur 3 applis : services user, service achat et interface client) 
+
+  
+
+Créer un projet sur Jira :  
+
+=> projet => créer un projet 
+
+  
+
+Détailler les epics, tickets et sous-tickets 
+
+CRUD : Create Read Update Delete 
+
+  
+
+Connecter Jira à Confluence  
+
+=> Pages de projets => connecter => créer un nouvel espace ou utiliser existant 
+
+  
+
+Connecter Jira à Bitbucket 
+
+=> </> code => Modifier les dépots => Ajouter => Ajouter un dépot de code => Bitbucket => créer un repo ou utiliser existant par application 
+
+  
+
+Créer un dossier pour la totalité du projet en local 
+
+  
+
+Ouvrir Git Bash dans le dossier 
+
+=> click doit => open git bash here 
+
+  
+
+Cloner le repo de chaque appli 
+
+=> git clone https://E_Ruah@bitbucket.org/emilie-ruah/ec-service-commandes.git 
+
+Se rendre dans le dossier cloné: 
+
+=> cd ec-service-commandes/ 
+
+Initialiser nodejs 
+
+=> npm init -y 
+
+Installer framework express  
+
+=> npm i express --save 
+
+Aller à VS Code 
+
+=> code . 
+
+Sortir du dossier et recommencer pour chaque repo 
+
+=> cd .. 
+
+Attention: ne pas installer nodejs si pas nécessaire (app Client en front end) 
+
+  
+
+Dans VSCode ouvrir Terminal Git Bash 
+
+  
+
+Pour le back end:  
+
+Créer un index.js et coder (cf fichier) 
+
+
+
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res, next) => {
+    res.json({
+        message: 'Welcom to docker Test'
+    });
+});
+
+app.listen(PORT, () => {
+    console.log('App run on port ' + PORT);
+});
+
+
+
+
+Modifier le package.json pour le lier à index.js (code ajouté:,"start": "node index.js") 
+
+Créer un fichier .gitignore et le coder: node_modules 
+
+Pour le front end: 
+
+Créer index.html , script.js et style.css  
+
+  
+
+Dans Git Bash 
+
+=> git add . 
+
+=> git commit -m "Initial commit" 
+
+=> git push origin master 
+
+  
+
+Créer un Dockerfile dans chaque dossier 
+
+Coder Dockerfile (cf fichier). Attention si pas nodejs code différent 
+
+Dans Git Bash 
+
+=> git add . 
+
+=> git commit -m "add Dockerfile" 
+
+=> git push origin master 
+
+  
+
+Ouvrir Docker Desktop 
+
+Envoyer sur Docker et Docker Hub. Dans Terminal: 
+
+=> docker build -t yourID/nom-du-dossier . (ne pas oublier le point!!!) 
+
+=> docker push yourID/nom-du-dossier 
+
+Vérifier qu'il fonctionne en lançant l'image: 
+
+=> docker run -d -p n°portlocal:n°portDocker yourID/nom-du-dossier 
+
+  
+
+Créer un repo pour docker-compose sur Jira:  
+
+=> </> code => modifier les dépots => cliquer + sur fenêtre avec repo Bitbucket => créer un nouveau repo 
+
+  
+
+Sur Git Bash hors vs code (à la racine du dossier projet): 
+
+=> cloner repo Bitbucket 
+
+=> aller à VSCode 
+
+  
+
+Créer un fichier docker-compose.yml  
+
+Coder (cf fichier).  
+
+image: yourID/nom-du-dossier 
+
+Envoyer du Bitbucket: 
+
+=> git add . 
+
+=> git commit -m "Initial commit" 
+
+=> git push origin master 
+
+Lancer les application dans le terminal: 
+
+=> docker compose up 

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  cc-service-ventes:
+    image: mattlheureux/cc-service-ventes
+    ports:
+    - "3000:80"
+    command: npm start
+  cc-service-produits:
+    image: mattlheureux/cc-service-produits
+    ports:
+    - "4000:80"
+    command: npm start
+  cc-application-client:
+    image: mattlheureux/cc-application-client
+    ports:
+    - "5000:80"

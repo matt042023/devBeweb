@@ -1,0 +1,196 @@
+
+<!-- Le <doctype> n’est pas une balise HTML. C’est une instruction spécifique qui indique au navigateur la version du langage HTML qui sera utilisée. Elle doit être utilisé au tout début, avant la balise html. -->
+<!DOCTYPE html>
+<!-- un attribut de langue sur la balise html pour déclarer la langue du texte par défaut dans la page -->
+<html lang="fr">
+<!-- L'élément HTML <head> fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style. -->
+<head>
+    <!-- La Meta Charset est un attribut qui détermine la façon dont le texte est transmis et stocké. -->
+    <meta charset="UTF-8">
+    <!-- La balise meta name= "viewport" va permettre de donner des instructions relatives à la taille et à l'échelle du viewport aux navigateurs mobiles afin que les différents éléments d'une page s'affichent au mieux -->
+    <!-- width=device-width définit la largeur des pages Web sur la largeur de l’écran de l’appareil. initial-scale=1.0 définit le niveau de zoom initial de la page Web lors de son chargement -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--La balise title est une balise du codage HTML qui permet de donner un titre à une page web. Ce titre se retrouve dans la barre de titre du navigateur mais également dans les pages de résultats des moteurs de recherche -->
+    <title>BTP-Béziers</title>
+    <!-- L'élément HTML <link> définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers une feuille de style, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles -->
+    <link rel="stylesheet" href="style.css">    
+</head>
+<!-- L'élément HTML <body> représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément <body> par document -->
+<body>
+    <!-- L'élément HTML <header> représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation -->
+    <header>
+        <!-- L'élément HTML <nav> représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.) -->
+        <nav>
+            <!-- L'élément HTML <div> (ou division) est le conteneur générique du contenu du flux -->
+            <div class="logo">
+                <!-- L'élément HTML <a> (pour ancre ou anchor en anglais), avec son attribut href, crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu'une URL peut adresser. Le contenu de chaque élément <a> doit indiquer la destination du lien -->
+                <a href="#main">
+                    <!-- L'élément HTML <img> permet d'intégrer une image dans un document. L'attribut src(source) donne le chemin d'acce vers l'image à afficher. L'attribut alt(alternative) donne une desciption de l'image au cas ou cette derniere ne peut pas s'afficher -->
+                    <img src="https://t3.ftcdn.net/jpg/05/09/79/52/360_F_509795262_mKf8JHHFMi5G6Rp6JZnk96DzUZxsCyac.jpg"
+                        alt="Logo de votre entreprise">
+                </a>
+            </div>
+            <!-- L'élément HTML <ul> représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces -->
+            <ul class="nav-links">
+                <!-- L'élément HTML <li> est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée (<ol>), une liste non ordonnée (<ul>) ou un menu (<menu>). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre. -->
+                <li><a href="#main">Accueil</a></li>
+                <li><a href="#about">Présentation</a></li>
+                <li><a href="#partenary">Partenaires</a></li>
+                <li><a href="#price">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- L'élément <aside> (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende. -->
+        <aside>
+            <!-- L'élément HTML <p> représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont des éléments blocs. -->
+            <p>Promotions sur nos tarifs de -25%</p>
+        </aside>
+    </header>
+    <!-- L'élément HTML <main> représente le contenu majoritaire du <body> du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application. -->
+    <main>
+        <!-- L' élément <section> représente une section générique autonome d'un document, qui n'a pas d'élément sémantique plus spécifique pour le représenter. Les sections doivent toujours avoir un titre, à quelques exceptions près. -->
+        <section id="main">
+            <!-- Les éléments HTML <h1> à <h6> représentent les six niveaux de titre de section. <h1> correspond au niveau de section le plus haut et <h6> correspond au niveau le plus faible. -->
+            <h2>BTP-Sète</h2>
+        </section>
+        <section id="about" class="presentation">
+            <img src="https://www.bareinternational.com/wp-content/uploads/2018/04/AdobeStock_182188781.jpeg" alt="">
+            <div class="orientation-right">
+                <h2>Présentation</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                    est debitis officiis dolore vero, voluptatem ad aperiam rem hic,
+                    similique dolor dignissimos soluta excepturi quisquam, sequi itaque!
+                    Ipsa, ut suscipit!
+                </p>
+            </div>
+        </section>
+        <section id="quality" class="presentation">
+            <div class="orientation-right">
+                <h2>Nos qualitées</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    inventore ut dolore iste minima recusandae assumenda provident vitae
+                    dignissimos nostrum numquam quod quidem nesciunt autem, aspernatur
+                    perspiciatis est rem cumque.
+                </p>
+            </div>
+            <img src="https://media.istockphoto.com/id/1297780288/fr/photo/offrir-une-construction-de-qualit%C3%A9-pour-un-style-de-vie-de-qualit%C3%A9.jpg?s=612x612&w=0&k=20&c=_Sab9-aPGeGeIKwWGpb3wHdWelvuZz9HMjwmaHB_rJw="
+                alt="">
+        </section>
+        <section id="partenary" class="presentation">
+            <img src="https://media.istockphoto.com/id/1297780288/fr/photo/offrir-une-construction-de-qualit%C3%A9-pour-un-style-de-vie-de-qualit%C3%A9.jpg?s=612x612&w=0&k=20&c=_Sab9-aPGeGeIKwWGpb3wHdWelvuZz9HMjwmaHB_rJw="
+                alt="">
+            <div class="orientation-right">
+                <h2>Nos partenaires</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    inventore ut dolore iste minima recusandae assumenda provident vitae
+                    dignissimos nostrum numquam quod quidem nesciunt autem, aspernatur
+                    perspiciatis est rem cumque.
+                </p>
+            </div>
+        </section>
+        <section id="price">
+            <h2>Tarifs</h2>
+            <!-- L' élément HTML <table> représente des données tabulaires, c'est-à-dire des informations présentées dans un tableau bidimensionnel composé de lignes et de colonnes de cellules contenant des données. -->
+            <table>
+                <!-- L' élément HTML <caption> spécifie la légende (ou le titre) d'un tableau. -->
+                <caption>
+                    Nos tarifs
+                </caption>
+                <!-- L'élément HTML <thead> définit un ensemble de lignes qui définit l'en-tête des colonnes d'un tableau -->
+                <thead>
+                    <!-- L'élément HTML <tr> définit une ligne de cellules dans un tableau. -->
+                    <tr>
+                        <!-- L'élément HTML <th> définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellule. -->
+                        <th>Prestataires</th>
+                        <th>Prestation</th>
+                        <th>Tarif</th>
+                    </tr>
+                </thead>
+                <!-- L'élément HTML <tbody> permet de regrouper un ou plusieurs éléments <tr> afin de former le corps d'un tableau HTML (<table>). -->
+                <tbody>
+                    <tr>
+                        <!-- L'élément HTML <td> définit une cellule d'un tableau qui contient des données -->
+                        <td>Jean Michel</td>
+                        <td>Pose de fenêtres</td>
+                        <td>700€</td>
+                    </tr>
+                    <tr>
+                        <!-- L'attribut rowspan spécifie le nombre de lignes qu'une cellule doit s'étendre -->
+                        <td rowspan="2">Francis</td>
+                        <td>Pose de portail</td>
+                        <td>400€</td>
+                    </tr>
+                    <tr>
+                        <td>Pose de velux</td>
+                        <td>200€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Jean Jacques</td>
+                        <td>Terrassement</td>
+                        <td>10000€</td>
+                    </tr>
+                    <tr>
+                        <td>Piscine</td>
+                        <td>5000€</td>
+                    </tr>
+                </tbody>
+                <!-- L'élément HTML <tfoot> permet de définir un ensemble de lignes qui résument les colonnes d'un tableau. -->
+                <tfoot>
+                    <tr>
+                        <!-- L'attribut rowspan spécifie le nombre de colonnes qu'une cellule doit s'étendre -->
+                        <th colspan="3">Tout est assuré par nos équipes</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <!-- L'élément HTML <form> représente un formulaire, c'est-à-dire une section d'un document qui contient des contrôles interactifs permettant à un utilisateur de fournir des informations. -->
+            <form method="post" action="traitement.php">
+                <!-- Les coordonnées -->
+                <!-- L'élément HTML <fieldset> est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ( <label> ) dans un formulaire HTML. -->
+                <fieldset>
+                    <!-- L'élément HTML <legend> représente une légende pour le contenu de son élément parent <fieldset>. -->
+                    <legend>Vos coordonnées</legend>
+                    <p>
+                        <!-- L'élément HTML <label> représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut for ou en plaçant l'élément du contrôle à l'intérieur de l'élément <label>. Un tel contrôle est appelé contrôle étiqueté par l'élément <label>. -->
+                        <label for="name">Quel est votre nom ?</label>
+                        <!-- L'élément HTML <input> est utilisé pour créer un contrôle interactif dans un formulaire web qui permet à l'utilisatrice ou l'utilisateur de saisir des données. Les saisies possibles et le comportement de l'élément <input> dépendent fortement de la valeur indiquée dans son attribut type et de ses autres attributs. -->
+                        <input type="text" id="name" name="name" autofocus>
+                    </p>
+                    <p>
+                        <label for="surname">Quel est votre prénom ?</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </p>
+                    <p>
+                        <label for="email">Quel est votre email ?</label>
+                        <input type="email" name="email" id="email">
+                    </p>
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" cols="40" rows="4"></textarea>
+                </fieldset>
+                <!-- L'élément <button> représente un bouton cliquable, utilisé pour soumettre des formulaires ou n'importe où dans un document pour une fonctionnalité de bouton accessible et standard. -->
+                <button type="submit" value="Envoyer">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <!-- L'élément HTML <footer> représente le pied de page de la section ou de la racine de sectionnement la plus proche. Un élément <footer> contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (copyright) ou les liens vers d'autres documents en relation. -->
+    <footer>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="CSS Valide !">
+            </a>
+        </p>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border: 0; width: 88px; height: 31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !">
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

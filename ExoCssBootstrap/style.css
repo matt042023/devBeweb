@@ -1,0 +1,21 @@
+@include media-breakpoint-up(md) {
+
+    .gridContainer {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+
+    }
+
+    .gridImgEqu {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .gridTitreEqu,
+    .gridParagraphe {
+        grid-column: 1 / 3;
+
+    }
+}

@@ -1,0 +1,111 @@
+/* --------------General------------ */
+
+*{
+    margin: 5%;
+    font-size: 3vw;
+    color: #54545C;
+    justify-content: center;
+    font-family:'oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a :hover{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 5.5vw;
+}
+
+img{
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+}
+
+h2{
+    font-size: 7vw;
+}
+/* -----------navbar----------------- */
+nav {
+    position: fixed;
+    height: 20%;
+    padding: 0%;
+    margin: 0%;
+    background-color: #48A3B7 ;
+    opacity : 0.5;
+    overflow: hidden;
+}
+#logo {
+    width: 10%;
+    float: left;
+}
+ul{
+    list-style-type: none;
+}
+li {
+    float: right;  
+    display: block; 
+    text-align: center;
+    padding: 2vw;
+ }
+ li a {
+    text-decoration: none; 
+ }
+
+
+/* -------------banniere------------------- */
+
+
+
+
+
+
+/* ---------------presentation----------------- */
+
+
+
+
+
+/* ---------------Service--------------------- */
+.container-service{
+    display: flex;
+    color: rgb(24, 11, 11);
+    background-color: bisque;
+    margin-top: 20px;
+    color: rgb(95, 51, 15);;
+
+}
+.lorem-service{
+    margin: 50px;
+    font-size: 20px;
+}
+.container-service h2{
+    text-align: center;
+}
+
+
+.photo-service img{
+    height: 30rem;
+
+}
+
+.lorem-service{
+    margin: 50px;
+    
+}
+
+
+
+
+/* -----------------Formulaire----------------- */
+
+
+
+
+
+
+/* --------------Footer-------------------------- */
+
+
+

@@ -1,0 +1,289 @@
+Lancement d'un projet :  
+
+ 
+
+ 
+
+----Création du projet---- 
+
+1 - Télécharger un dossier qui contient le Framework  
+
+2 - Extraire le dossier puis l'ajouter au dossier 64wamp/www/Site 
+
+3 - Copier le chemin d'accès du dossier à partir du dossier public 
+
+*PENSER AU .MY DANS LE NOM 
+
+4 - Sur WampServer, ajouter un Virtual Host puis coller le chemin d'accès 
+
+5 - Rafraichir/Redémarrer les services Wamp le mettre à jours avec le nouveau serveur 
+
+ 
+
+ 
+
+----Configuration---- 
+
+6 - Rename "env" en ".env" 
+
+7 - Coller à l'intérieur : "CI_ENVIRONNEMENT = development" 
+
+8 - Dans le terminal à la racine du projet, initialiser la commande : 
+
+"C:\wamp64\bin\php\php8.0.26\php.exe spark serve" 
+
+Cela crée une barre de debug en bas de la page qui donne des informations sur les variables de la page concernée 
+
+ 
+
+ 
+
+MVC/CRUD :  
+
+CTRL + P = Trouver un fichier 
+
+ 
+
+ 
+
+1 - Dans les routes déclarer le "var RouteCollection" puis intégrer la route principal (home) 
+
+2 - Ajouter use App\Controller\Pages et récupérer les route pages 
+
+ 
+
+ 
+
+exemple: $routes->get('pages', [Pages:::class, 'index'] qui signifie charger la méthode 'index dans "pages" 
+
+$routes->get('pages', [Pages:::class, 'view'] qui signifie charger la méthode view dans "pages" 
+
+ 
+
+ 
+
+3 - Crée un controller pour la page ("Pages.php") 
+
+4 - Utiliser namespace App\Controller pour localiser le document 
+
+5 - Crée une class : class Pages extends Base controller {} qui contient une "public function (index) {}" et retourne "view('welcome_message')" 
+
+6 - Ajouter une public function view ($page = "home")  
+
+ 
+
+ 
+
+7 - Dans view crée un dossier "template" qui contient un Header et un Footer 
+
+8 - Toujours dans view crée un dossier "pages" qui contient home et about 
+
+ 
+
+ 
+
+9 - Retourner dans le controller et ajouter la logique, d'abord le PageNotFound :  
+
+If (!is_file(APPATH . 'view/pages/' . $page . '.php')){ 
+
+throw new PageNotFoundException($pages) //Si aucune page n'est trouver renvoyer 
+
+} 
+
+SINON 
+
+Tu crée un titre :  
+
+$data['title'] = ucfirst($page) 
+
+Qui est retourner dans le view Header>Pages>Footer :  
+
+return view ('template/header', $data)... 
+
+ 
+
+ 
+
+10 - Crée une base de donnée qui contient des tables/données 
+
+ 
+
+ 
+
+Entités: 
+
+11 - Crée un dossier qui contient les entités  
+
+12 - Ajouter un fichier entité  
+
+13 - A l'intérieur ajouter un namespace : "App\Entities". puis un objet, ici : "class News {}". 
+
+14 - Dans l'objet ajouter les variables : "protected $id, protected $title, protected $slug, protected $body" 
+
+15 - Crée un construct qui contient les informations nécessaire : "public function __construct ($id, $title, $slug, $body) {}". 
+
+Puis à l'intérieur déclarer les parametres : "$this->id = $id..." 
+
+16 - Dans l'objet à la suite, get et set les paramètres et leurs données :  
+
+("public function getId() { return $this->id } pour chacun 
+
+puis une fois l'ensemble des getters déclarer, faire la même chose pour les setters :  
+
+("public function setId() { $this->id = id } 
+
+//Return affiche la valeur sans lui, il prend seulement la valeur 
+
+ 
+
+ 
+
+17 - Dans le .env décommenter la partie qui récupère les informations de la base de donnée 
+
+ 
+
+ 
+
+18 - Dans le fichier Model crée un document NewsModel.php 
+
+19 - Déclarer le namespace : App/Models; et le chemin utiliser pour codeIgniter : use CodeIgniter\Model 
+
+20 - Crée un objet NewsModel : Class NewsModel extends Model {protected $table = 'news} 
+
+21 - Ajouter dans l'objet du model le CRUD (GetAll, GetOne, Create, Delete, Update) : public function getNews ($slug = false) { if ($slug === false) { return $this->findAll(); } .. 
+
+ 
+
+ 
+
+22 - Dans les routes ajouter l'utilisation du news : use App\Controller\News 
+
+23 - Ajouter les routes : $routes->get('news', [News::class, 'index'}); / $routes->get('news/:segment)', [News::class, show}); 
+
+ 
+
+ 
+
+24 - Création du controller News.php dans lequel on déclare le namespace : App\Controllers et le chemin d'accès du model utilisé : use App\Models\NewsModel; 
+
+25 - Crée une public function index() {} dans lequel on intègre le model qui représente l'objet : $model = model(NewsModel::class) et  
+
+les datas associés : $data = ['news'] = $model->getNews()  
+
+26 - Puis on ajoute le contrôle des fonctions utilisé dans le model : public function show($slug = null) { $model = model(NewsModel::class); $data['news'] = $model->getNews($slug) 
+
+27 - Remplacer les $data par : $data = [ 'news' => $model->getNews(), 'title' => 'News archive', ]; 
+
+28 - Ajouter le return view pour afficher la page correspondante ici Header>news\index>Footer 
+
+ 
+
+ 
+
+29 - Dans view crée un dossier news puis y ajouter un document index.php qui contient une structure la page 
+
+ 
+
+ 
+
+Transformer en objet un tableau 
+
+30 - dans le controller :  
+
+ajouter le chemin de l'entité utilisé : use App\Entities\News as NewsEntity; 
+
+et en dessous de $model:  
+
+$dataEntities = array_map(function($news) {  
+
+return new NewsEntity($news['id'], $news['title'.. ); 
+
+}, $model->getNews()  
+
+puis dans $data modifier 'news => newsEntities. 
+
+ 
+
+ 
+
+31 - Dans l'index mettre à jours [$title} en utilisant les getTitle, getBody..  
+
+ 
+
+ 
+
+Cheatcode :  
+
+ 
+
+ 
+
+1 - Dans le model au lieu de protected, il faut mettre protected $returnType = App\entities\News::class 
+
+ 
+
+ 
+
+le construct n'est plus nécessaire car il se fait automatiquement 
+
+ 
+
+ 
+
+2 - En retournant dans le controller, tu peux effacer new Entity puis dans le data des éléments on peut utiliser dans 'news' => model->getNews() 
+
+puis retirer le data 
+
+ 
+
+ 
+
+ 
+
+ 
+
+///////////////////////// 
+
+Pour la méthode show :  
+
+ 
+
+ 
+
+1 - Dans le controller en dessous du $data pour le model ajouter le if(empty($data['news'})){ throw new pageNotFound... 
+
+Puis ajouter le $data des éléments et le return view 
+
+ 
+
+ 
+
+2 - Dans Views\news crée un fichier view.php qui contient le titre et le body sans oublier la méthode esc() 
+
+ 
+
+ 
+
+3 - Une fois que cela fonctionne correctement retourner dans le controller, il faut le transformer en objet. 
+
+après le if crée une variable : 
+
+$entity = new NewsEntity($data['news']['id],$data['news']['title'],$data['news']... 
+
+puis remplacer le $data des éléments tel que :  
+
+$data['news'] = $entity 
+
+$data['title']= $entity->getTitle() 
+
+ 
+
+ 
+
+4 - Ensuite aller dans la view "view.php" pour récupérer l'objet et non plus un tableau  
+
+utiliser $news->gettitle() $news->getbody() 
+
+ 
+
+ 

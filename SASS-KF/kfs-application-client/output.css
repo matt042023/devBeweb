@@ -1,0 +1,99 @@
+.nav-color {
+  background-color: rgb(250, 236, 214);
+}
+
+.backgroung-accueil {
+  background-image: url(/ressources/coin-vearanda-cafe.jpg);
+  height: 80vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backgroung-accueil .title-accueil {
+  padding: 0, 5em;
+  color: rgb(250, 236, 214);
+  font-family: "Dancing Script", cursive;
+  font-size: 7em;
+  display: flex;
+}
+
+main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background-color: rgb(250, 236, 214);
+  color: #907955;
+}
+
+.image-size img {
+  background-size: cover;
+  width: 100%;
+  border-radius: 30px;
+}
+
+#productList {
+  padding: 2em;
+}
+
+#contact {
+  padding: 5em;
+}
+
+@media screen and (min-width: 760px) {
+  .backgroung-accueil {
+    height: 90vh;
+  }
+  #presentation {
+    height: 100vh;
+    padding-top: 10vh;
+  }
+  #presentation h2 {
+    text-align: center;
+    padding-top: 2em;
+  }
+  #presentation p {
+    padding: 4em 1em 0 1em;
+  }
+  #equipe {
+    height: 100vh;
+    padding-top: 10vh;
+  }
+  #equipe h2 {
+    text-align: center;
+    padding-top: 2em;
+  }
+  #equipe p {
+    padding: 4em 1em 0 1em;
+  }
+  #productList {
+    height: 100vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 15vh;
+    justify-content: center;
+  }
+  .container-table {
+    border: 1px rgb(0, 0, 0) solid;
+    padding: 2em;
+    background-color: #907955;
+    border-radius: 10px;
+    box-shadow: 5px 5px 18px 2px #624924;
+  }
+  .container-table .table {
+    background-color: #907955;
+  }
+  .container-table h2 {
+    color: rgb(250, 236, 214);
+  }
+  #contact {
+    height: 100vh;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  my-nodejs-app: #nom de l'app
+    build: .
+    ports:
+     - "3000:80" #num du port local : num port docker
+    volumes:
+      - .:/usr/src/app
+    command: npm start
+#attention à indenter correctement le yml!!!

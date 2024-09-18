@@ -1,0 +1,21 @@
+version: '3'
+services:
+  ec-service-user:
+    image: mattlheureux/grain-service-user
+    ports:
+    - "3000:80"
+    command: npm start
+  ec-service-commande:
+    image: mattlheureux/grain-service-commande
+    ports:
+    - "4000:80"
+    command: npm start
+  ec-service-dons:
+    image: mattlheureux/grain-service-dons
+    ports:
+    - "5000:80"
+    command: npm start
+  ec-application-client:
+    image: mattlheureux/grain-application-client
+    ports:
+    - "6000:80"

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Café</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid nav-color">
+                <a class="navbar-brand" href="./index.html"><img src="../ressources/logoCafe.jpg"
+                        alt="Logo-sass-kf"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#accueil">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#presentation">Présentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#equipe">Equipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productList">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="backgroung-accueil" id="accueil">
+            <h1 class="title-accueil">SASS KF</h1>
+        </div>
+    </header>
+    <main>
+        <section id="presentation">
+            <!-- Utilisation de classes de Bootstrap pour la mise en page destop -->
+            <div class="container-fluid d-none d-md-block  container-presentation">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <h2>Présentation</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Consequuntur
+                            provident dolores numquam
+                            architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                            ipsam
+        
+                            architecto maxime nulla neque, voluptatum deleniti.
+                        </p>
+                    </div>
+                    <div class="col-md-8 image-size">
+                        <img class="animate__animated  animate__flip" src="ressources/barman-interagissant-clients.jpg"
+                            alt="barman interagissant avec des clients du Sass KF" id="img-presentation">
+                    </div>
+                </div>
+            </div>
+            <!-- Utilisation de classes de Bootstrap pour la mise en page mobile -->
+            <div class="container-fluid d-md-none ">
+                <div class="row">
+                    <div class="col image-size">
+                        <h2>Présentation</h2>
+                        <img class="animate__animated  animate__flip" src="ressources/barman-interagissant-clients.jpg"
+                            alt="barman interagissant avec des clients du Sass KF">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Consequuntur
+                            provident dolores numquam
+                            architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                            ipsam
+                            architecto maxime nulla neque, voluptatum deleniti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="equipe">
+            <!-- Utilisation de classes de Bootstrap pour la mise en page destop -->
+            <div class="container-fluid d-none d-md-block ">
+                <div class="row">
+                    <div class="col-md-8 image-size">
+                        <img class="animate__animated  animate__flip" src="ressources/equipe-cafe.jpg"
+                            alt="l'equipe du Sass KF au comptoire petit dejeuner">
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Equipe</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Consequuntur
+                            provident dolores numquam
+                            architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                            ipsam
+                            architecto maxime nulla neque, voluptatum deleniti.
+                        </p> 
+                    </div>
+                </div>
+            </div>
+            <!-- Utilisation de classes de Bootstrap pour la mise en page mobile -->
+            <div class="container-fluid d-md-none">
+                <div class="row">
+                    <div class="col image-size">
+                        <h2>Equipe</h2>
+                        <img class="animate__animated  animate__flip" src="ressources/equipe-cafe.jpg"
+                            alt="l'equipe du Sass KF au comptoire petit dejeuner">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Consequuntur
+                            provident dolores numquam
+                            architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                            ipsam
+                            architecto maxime nulla neque, voluptatum deleniti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productList">
+            <div class="container-table">
+                <h2>Nos Cafés</h2>
+                <table class="table ">
+                    <caption>Cafés Bio et équitables</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Café</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Ajouter</th>
+                            <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Ristretto</th>
+                            <td>1,50€</td>
+                            <td><button id="ajoutRistretto">Ristretto +</button></td>
+                            <td><button id="SupprimerRistretto">Ristretto -</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Expresso</th>
+                            <td>1,50€</td>
+                            <td><button id="ajoutExpresso">Expresso +</button></td>
+                            <td><button id="SupprimerExpresso">Expresso -</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Double expresso</th>
+                            <td>1,70€</td>
+                            <td><button id="ajoutDoubleExpresso">Double expresso +</button></td>
+                            <td><button id="SupprimerDoubleExpresso">Double expresso -</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Café allongé</th>
+                            <td>1,80€</td>
+                            <td><button id="ajoutCaféAllongé">Café allongé +</button></td>
+                            <td><button id="SupprimerCaféAllongéRistretto">Café allongé -</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cappuccino</th>
+                            <td>3,00€</td>
+                            <td><button id="ajoutCappuccino">Cappuccino +</button></td>
+                            <td><button id="SupprimerCappuccino">Cappuccino -</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Latte Macchiato</th>
+                            <td>3,50€</td>
+                            <td><button id="ajoutLatteMacchiato">Latte Macchiato +</button></td>
+                            <td><button id="SupprimerLatteMacchiato">Latte Macchiato -</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="password" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="forname" class="form-label">Prénom</label>
+                    <input type="password" class="form-control" id="forname">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">adresse email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="renseignement">
+                    <label class="form-check-label" for="renseignement">Renseignement</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="reclamation">
+                    <label class="form-check-label" for="reclamation">Reclamation</label>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Ecrivez votre message</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">SASS KF</h5>
+                    <p class="card-text">
+                        50 rue de la Margeride <br>
+                        34760 Boujan sur Libron <br>
+                        0786265148 <br>
+
+                    </p>
+                    <a href="mailto:matt.lheureux@hotmail.fr?subject=Contacté%20depuis%20sass%20KF" class="btn btn-primary">Envoyer nous un mail</a>
+                </div>
+                <div class="card-header">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="/ressources/LOGO/facebook-icon-30X30.png"
+                                    alt="logo-facebook">facebook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com"><img src="/ressources/LOGO/instagram-logo-30X30.png"
+                                    alt="logo-instagram">Instagram</a>
+                        </li>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

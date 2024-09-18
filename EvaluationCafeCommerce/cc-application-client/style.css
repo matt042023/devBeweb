@@ -1,0 +1,201 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #4c3e0f;
+    color: #f0e9e9;
+    max-width: 100%;
+}
+
+
+nav {
+    max-height: 5em;
+    display: grid;
+    background-color: #f5f3f1;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    align-items: center;
+}
+
+
+
+#productList {
+    margin: 0.5em;
+    display: grid;
+}
+
+#contact {
+    display: grid;
+    margin: 0.5em;
+}
+
+#contact button {
+    max-width: 5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4c3e0f;
+
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table tbody td {
+    border: 1px solid;
+
+}
+
+#presentation {
+    display: grid;
+    grid-template-columns: repeat("3, 1fr");
+    margin: 1em;
+    align-items: center;
+}
+
+
+
+#equipe {
+    grid-template-columns: repeat("3, 1fr");
+    display: grid;
+    margin: 1em;
+    align-items: center;
+}
+
+nav img {
+    max-width: 5em;
+
+
+}
+
+#presentation img {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
+    min-width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+#equipe img {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
+    min-width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#presentation p {
+    text-align: justify;
+}
+
+#presentation h2 {
+    text-align: center;
+
+}
+
+#equipe p {
+    text-align: justify;
+}
+
+#equipe h2 {
+    text-align: center;
+
+}
+
+.container-prodduces {
+    display: grid;
+    margin: 2em;
+}
+
+.gridTitreProd {
+    text-align: center;
+}
+
+.gridImgProd {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 90%;
+    min-width: 90%;
+}
+
+
+
+.gridParagrapheprod {
+    text-align: justify;
+    padding-left: 1em;
+}
+
+tbody img {
+    max-height: 5em;
+}
+
+@media screen and (min-width: 768px) {
+    #presentation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridImgPre {
+        grid-row: span 2;
+    }
+
+    .gridContainer {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+
+    }
+
+    .gridImgEqu {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .gridTitreEqu,
+    .gridParagraphe {
+        grid-column: 2 / 3;
+
+    }
+
+    .container-prodduces {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridImgProd {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .gridTitreProd,
+    .gridParagrapheprod {
+        grid-column: 2 / 3;
+
+    }
+
+    .containergridCoordonnees {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mail {
+        grid-column: span 2;
+    }
+
+    .containergriddemande {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .message {
+        grid-column: span 2;
+    }
+
+}

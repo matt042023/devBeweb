@@ -1,0 +1,28 @@
+créer un dossier
+Terminal: 
+    nmp init -y
+        => crée un package.json
+créer un fichier .js et compléter avec code
+lier le .js au package.json:
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js" 
+Terminal:
+    npm i express --save
+    npm start
+Quitter node sur Terminal:
+    crt C 
+    crt C
+creer un fichier Dockerfile et compléter code
+Terminal:
+    docker build -t nomDuProjet .
+    docker run -d -p n°portLocal:n°portDocker nomDuProjet
+creer un fichier docker-compose.yml et compléter code. Attention indenter!
+Terminal:
+    docker compose up
+
+pour push sur docker hub sur Terminal:
+    docker build -t idDockerHub/nomDuProjet .
+    docker push idDockerHub/nomDuProjet
+
+    et voilà....

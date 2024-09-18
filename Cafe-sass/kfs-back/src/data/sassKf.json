@@ -1,0 +1,50 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "coffee",
+            "price": 5
+        },
+        {
+            "name": "je sais pas",
+            "price": 6,
+            "id": 3
+        },
+        {
+            "name": "dfgdsfgs",
+            "price": 4,
+            "id": 5
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "utilisateur1",
+            "email": "utilisateur1@example.com"
+        },
+        {
+            "id": 3,
+            "user": {
+                "username": "matthieu",
+                "email": "nouvelle_adresse_email@example.com",
+                "password": "root"
+            }
+        },
+        {
+            "id": 4,
+            "username": "matthieu",
+            "email": "nouvelle_adresse_email@example.com",
+            "password": "root"
+        },
+        {
+            "username": "matt",
+            "password": "$2b$10$GxUzPzBgN/Y7t9zcuvQeruwplpIQjKrrz5j23Z/ZS7AE3LJEJPGvC",
+            "id": 5
+        },
+        {
+            "username": "gfhhhj",
+            "password": "$2b$10$QJ1Ah4V0MfmBV70/4XjlY.bW0Zc1qpwkW8W5V4xrPCP.nuCVDvdgy",
+            "id": 6
+        }
+    ]
+}

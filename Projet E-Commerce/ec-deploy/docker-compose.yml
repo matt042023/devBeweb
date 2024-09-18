@@ -1,0 +1,16 @@
+version: '3'
+services:
+  ec-service-user:
+    image: mattlheureux/ec-service-user
+    ports:
+    - "3000:3000"
+    commande: npm start
+  ec-service-commande:
+    image: mattlheureux/ec-service-commande
+    ports:
+    - "4000:3000"
+    commande: npm start
+  ec-application-client:
+    image: mattlheureux/ec-application-client
+    ports:
+    - "5000:3000"

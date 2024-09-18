@@ -1,0 +1,31 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "expresso",
+            "price": 2
+        },
+        {
+            "id": 2,
+            "name": "Cappuchino",
+            "price": 3
+        },
+        {
+            "name": "expresso",
+            "price": 2,
+            "id": 3
+        },
+        {
+            "name": "ristretto",
+            "price": 1,
+            "id": 4
+        }
+    ],
+    "user": [
+        {
+            "id": 1,
+            "name": "Huster",
+            "email": "f.huster@gmail.fr"
+        }
+    ]
+}

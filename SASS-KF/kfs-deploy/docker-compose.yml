@@ -1,0 +1,6 @@
+version: '3'
+services:
+  kfs-application-client:
+    image: mattlheureux/kfs-application-client
+    ports:
+    - "3000:80"

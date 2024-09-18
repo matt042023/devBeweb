@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar animate__animated animate__backInLeft">
+            <div class="gridItems"><img src="./image/logoCafe.jpg" alt="Logo-cafe"></div>
+            <div class="gridItems"><a href="#presentation">Présentation</a></div>
+            <div class="gridItems"><a href="#product">Produits</a></div>
+            <div class="gridItems"><a href="#contact">Contact</a></div>
+        </nav>
+    </header>
+    <main>
+        <section id="presentation">  
+            <h2 class="gridTitrePre">Présentation</h2>
+            <img class="gridImgPre animate__animated  animate__flip" src="/image/barman-interagissant-clients.jpg"
+                alt="image de l'entreprise">
+            <p class="gridParagraphePre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+                provident dolores numquam
+                architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                ipsam
+                architecto maxime nulla neque, voluptatum deleniti.
+            </p>
+        </section>
+        <section id="equipe" class="gridcontainer">
+            <h2 class="gridTitreEqu">Equipe</h2>
+            <img class="gridImgEqu animate__animated  animate__flip" src="/image/equipe-cafe.jpg"
+                alt="image de l'equipe">
+            <p class="gridParagraphe">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur provident
+                dolores numquam
+                architecto! Tempore laboriosam rerum eaque excepturi esse doloribus ducimus inventore atque,
+                ipsam
+                architecto maxime nulla neque, voluptatum deleniti.
+            </p>
+        </section>
+        <section id="principale-produces">
+            <h2>Nos produits phare</h2>
+            <div class="container-prodduces">
+                <h3 class="gridTitreProd">BRESIL</h3>
+                <img class="gridImgProd" src="/image/cafeBresil.png" alt="cafe du bresil">
+                <p class="gridParagrapheprod">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit
+                    deserunt quod quos quas,
+                    magni voluptates ex assumenda excepturi aliquam!</p>
+            </div>
+            <div class="container-prodduces">
+                <h3 class="gridTitreProd">COSTA RICA</h3>
+                <img class="gridImgProd" src="/image/cafeCostaRica.webp" alt="cafe du Costa Rica">
+                <p class="gridParagrapheprod">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit
+                    deserunt quod quos quas,
+                    magni voluptates ex assumenda excepturi aliquam!</p>
+            </div>
+            <div class="container-prodduces">
+                <h3 class="gridTitreProd">MADAGASCAR</h3>
+                <img class="gridImgProd" src="/image/cafeMadagascar.jpg" alt="cafe de madagascar">
+                <p class="gridParagrapheprod">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit
+                    deserunt quod quos quas,
+                    magni voluptates ex assumenda excepturi aliquam!</p>
+            </div>
+        </section>
+        <section id="productList">
+            <h2>Produits</h2>
+            <table>
+                <caption>Nos tarifs</caption>
+                <thead>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Produits</th>
+                        <th>Decription</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bresil</td>
+                        <td><img src="/image/cafeBresil.png" alt=""></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quos.</td>
+                        <td>4€</td>
+                    </tr>
+                    <tr>
+                        <td>Costarica</td>
+                        <td><img src="./image/cafeCostaRica.webp" alt=""></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quos.</td>
+                        <td>3€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Madagascar</td>
+                        <td><img src="./image/cafeMadagascar.jpg" alt=""></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quos.</td>
+                        <td>4€</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./image/cafeMadagascar.jpg" alt=""></td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quos.</td>
+                        <td>3€</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th colspan="4">Commerce equitable</th>
+                </tfoot>
+            </table>
+
+        </section>
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <form method="post" action="traitement.php"></form>
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <div class="containergridCoordonnees">
+                    <p class="name">
+                        <label for="name">Votre nom : </label>
+                        <input type="text" name="name" id="name">
+                    </p>
+                    <p class="surname">
+                        <label for="surname">Votre prenom : </label>
+                        <input type="text" name="surname" id="surname">
+                    </p>
+                    <p class="mail">
+                        <label for="email">Votre email : </label>
+                        <input type="email" name="email" id="email">
+                    </p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Votre demande</legend>
+                <div class="containergriddemande">
+                    <p class="renseignement">
+                        <label for="information">renseignement</label>
+                        <input type="radio" name="information" id="information">
+                    </p>
+                    <p class="reclamation">
+                        <label for="reclamation">reclamation </label>
+                        <input type="radio" name="reclamation" id="reclamation">
+                    </p>
+                    <p class="message">
+                        <label for="description">ecrivez votre message : </label>
+                        <textarea name="description" id="decription" cols="30" rows="10"></textarea>
+                    </p>
+            </fieldset>
+            </div>
+            <button type="submit" value="envoyer">envoyer</button>
+        </section>
+    </main>
+</body>
+
+</html>

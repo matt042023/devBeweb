@@ -1,0 +1,32 @@
+.content-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.content-section {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .title {
+        order: 1;
+    }
+
+    .image {
+        order: 2;
+    }
+
+    .paragraphe {
+        order: 3;
+    }
+
+}
